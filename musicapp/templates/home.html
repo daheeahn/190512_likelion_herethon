@@ -1,0 +1,19 @@
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<div class="container">
+
+    선곡해주세요 
+    <hr>
+
+    <form action="{% url 'apply' %}" method="POST">
+        {% csrf_token %}
+        가수 : <input type="text" name="artist"> <br><br>
+        곡 제목 : <input type="text" name="title"> <br><br>
+
+        <input type="submit" value="노래 틀어주세요!">
+    </form>
+
+</div>
